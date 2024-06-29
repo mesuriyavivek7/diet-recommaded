@@ -1,10 +1,14 @@
 import React from 'react'
+import Navbar from '../../components/navbar/Navbar'
+import Footer  from '../../components/footer/Footer'
+import Cards from '../../components/cards/Cards'
 
 export default function HomeSet() {
   return (
-    <div> Yoooo
-      home page
-      <p>Welcome to Diet app</p>
+    <div> 
+      <Navbar></Navbar>
+      <Cards></Cards>
+      <Footer></Footer>
     </div>
   )
 }
