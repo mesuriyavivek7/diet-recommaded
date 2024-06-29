@@ -3,13 +3,13 @@ import { useState } from 'react';
 
 import axios from 'axios'
 
-import { useContext } from 'react';
+
 import {useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import { AuthContext } from '../../context/AuthContext';
+
 
 const SignUpForm = () => {
-    const {dispatch}=useContext(AuthContext)
+    
     const navigate=useNavigate()
     const [error,setError]=useState(null)
     const [credential,setCredential]=useState({
