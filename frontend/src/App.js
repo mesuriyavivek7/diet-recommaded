@@ -6,14 +6,18 @@ import HomeSet from './pages/home/HomeSet';
 import Footer from './components/footer/Footer';
 import Cards from './components/cards/Cards';
 import Navbar from './components/navbar/Navbar';
+import SignUpForm from "./components/form/SignUpForm";
+import AddProfile from "./components/form/AddProfile";
+
 
 function App() {
   return (
     <div className="App">
         {/* <HomeSet></HomeSet> */}
-        <Navbar/>
+        <AddProfile/>
+        {/* <Navbar/>
         <Cards/>
-        <Footer/>
+        <Footer/> */}
     </div>
   );
 }
