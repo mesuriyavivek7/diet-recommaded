@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function HomeSet() {
   return (
-    <div>home page</div>
+    <div>Ali baba 40 chor</div>
   )
 }
