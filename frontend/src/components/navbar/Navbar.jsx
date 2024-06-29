@@ -22,9 +22,11 @@ export default function Navbar() {
             Home
           </a>
           
-          <a href="/recipes" className="text-gray-300 hover:text-white">
+          <Link to={'/recipe'}>
+          <a href="##" className="text-gray-300 hover:text-white">
             Recepies
           </a>
+          </Link>
 
           <Link to={user===null?'/login':'/profile'} >
              <a href="##" className="text-gray-300 hover:text-white">

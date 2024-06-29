@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import recipesCSV from "../../assets/CSV/Recipies.csv";
 
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
+
 export default function Recipe() {
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -56,6 +59,8 @@ export default function Recipe() {
   }
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className="container mx-auto py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {recipes.map((recipe, index) => (
@@ -114,5 +119,7 @@ export default function Recipe() {
         </div>
       )}
     </div>
+    <Footer></Footer>
+    </>
   );
 }

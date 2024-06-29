@@ -2,14 +2,20 @@ import React from 'react';
 
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import { useContext } from 'react';
+
+import { AuthContext } from '../../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const UserProfile = () => {
   // Define static profile details
+  
+  const {user}=useContext(AuthContext)
   const profileDetails = {
-    age: 30,
-    weight: 70,
-    height: 175,
-    gender: 'Male',
+    age: (user===null)?('none'):(user.age),
+    weight: (user===null)?('none'):(user.weight),
+    height: (user===null)?('none'):(user.height),
+    gender: (user===null)?('none'):(user.gender),
   };
 
   const profilePic = 'https://1.bp.blogspot.com/-Bz6uidKEVWU/X82ZqzXuvyI/AAAAAAAAlEo/Xs-XBR57BnUgTSrAICVLUV4XA-_iuiUyQCLcBGAsYHQ/s1024/Virat.png'; // Replace with actual path
@@ -35,12 +41,14 @@ const UserProfile = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="max-w-md w-full mx-auto">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 relative">
+          <Link to={'/addinfo'}>
           <button
             className="absolute top-0 left-0 mt-2 ml-2 bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-md text-sm"
             onClick={handleEditProfile}
           >
             Edit Profile
           </button>
+          </Link>
 
 
           <div className="flex justify-center">

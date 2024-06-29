@@ -9,11 +9,11 @@ import Recipe from "../recipie/Recipie";
 export default function HomeSet() {
   return (
     <div>
-      <Recipe></Recipe>
-      {/* <Navbar></Navbar>
+      
+      <Navbar></Navbar>
       <Hero />
       <Cards></Cards>
-      <Footer></Footer> */}
+      <Footer></Footer> 
     </div>
   );
 }

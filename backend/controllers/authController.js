@@ -39,3 +39,24 @@ export const login=async (req,res,next)=>{
         next(err)
     }
  }
+
+ export const updateUser=async (req,res,next)=>{
+
+   try{
+       const updateUser=await User.findByIdAndUpdate(req.params.id,{$set:req.body})
+       console.log(updateUser)
+       res.status(200).json(updateUser)
+    }catch(err){
+       next(err)
+    }
+
+}
+
+export const getUser=async (req,res,next)=>{
+   try{
+       const myuser=await User.findById(req.params.id)
+       res.status(200).json(myuser)
+   }catch(err){
+      next(err)
+   }
+}
