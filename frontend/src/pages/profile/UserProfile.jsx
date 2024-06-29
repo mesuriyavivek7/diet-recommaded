@@ -95,12 +95,13 @@ const UserProfile = () => {
               </dd>
             </div>
           </dl>
-          <button
-            className="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md text-sm"
-            onClick={handleShowRecipes}
-          >
-            Show Recommended Recipes
-          </button>
+          <Link to={'/recipe'}>
+              <button
+               className="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md text-sm"
+              >
+              Show Recommended Recipes
+             </button>
+          </Link>
         </div>
       </div>
     </div>
