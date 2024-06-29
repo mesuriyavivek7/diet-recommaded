@@ -4,14 +4,16 @@ import Footer from "../../components/footer/Footer";
 import Cards from "../../components/cards/Cards";
 import Login from "../login/Login";
 import Hero from "../../components/Header/hero";
+import Recipe from "../recipie/Recipie";
 
 export default function HomeSet() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Recipe></Recipe>
+      {/* <Navbar></Navbar>
       <Hero />
       <Cards></Cards>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   );
 }
