@@ -4,6 +4,9 @@ import cookieParser from "cookie-parser"
 //importing mongoose
 import mongoose from "mongoose"
 
+//importing routes
+import authRoute from './routes/auth.js'
+
 
 const app=express()
 dotenv.config()
@@ -35,6 +38,8 @@ app.use(express.json())
 //this middleware for authentication
 app.use(cookieParser())
 
+
+app.use('/api/auth',authRoute)
 
 //middleware for error handeling
 app.use((err,req,res,next)=>{

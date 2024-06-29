@@ -28,6 +28,15 @@ const userSchema=new mongoose.Schema({
     },
     dietary_select:{
         type:String
+    },
+    allergies:{
+        type:String,
+    },
+    health_goals:{
+        type:String,
     }
 
+
 })
+
+export default mongoose.model("User",userSchema)
