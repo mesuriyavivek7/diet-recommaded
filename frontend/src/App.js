@@ -1,7 +1,5 @@
 import "./App.css";
 
-import './App.css';
-
 import HomeSet from './pages/home/HomeSet';
 import Footer from './components/footer/Footer';
 import Cards from './components/cards/Cards';
@@ -11,7 +9,8 @@ import AddProfile from "./components/form/AddProfile";
 
 
 function App() {
-  return (
+  return (<>
+
     <div className="App">
         {/* <HomeSet></HomeSet> */}
         <AddProfile/>
@@ -19,6 +18,7 @@ function App() {
         <Cards/>
         <Footer/> */}
     </div>
+  </>
   );
 }
 
